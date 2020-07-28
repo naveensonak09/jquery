@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+        var foo = 'qux';
+var myFunction = function() {
+  var foo = 'bar';
+};
+
+console.log( foo ); // logs 'qux'
+myFunction();
+console.log( foo );
+        </script>
+    </head>
+    <body>
+        <h3>hello</h3>
+    </body>
+</html>
+
+<script>
+function test()
+{
+    a = 20;
+}
+test();
+console.log(a);
+</script>
+
+<script>
+var person = {
+  firstName : '',
+  lastName : ''
+};
+
+person.firstName ='naveen';
+person.lastName ='kumar';
+
+console.log(person.firstName);
+console.log(person['lastName']);
+</script>
+
+<script>
+var person = {
+  firstName : 'naveenn',
+  lastName : 'Sender',
+  greet : function() {
+    console.log( 'Hi, ' + this.firstName );
+  }
+};
+
+person.greet( person.firstName );
+</script>
+
+<script>
+var person = {
+  firstName : 'Boaz',
+  lastName : 'Sender',
+  greet : function(greeting, punctuation) {
+    console.log( greeting + ', ' + this.firstName + punctuation );
+  }
+};
+
+var sayIt = person.greet;
+
+sayIt.call( person, 'Hello', '!!1!!1' );
+</script>
